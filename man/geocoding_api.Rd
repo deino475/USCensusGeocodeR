@@ -22,6 +22,6 @@ dataframe
 This package allows for individuals to easily geocode address parts using the US Census Geocoding API Services. By passing in the Street Address, City, State, and/or Zip Code, you   can find information such as the GEOID of the block group the address resides in as well as the coordinates of the block group the address resides in.
 }
 \examples{
-geocoding_api("5619 Belarbor St","Houston","TX","77033")
+geocoding_api("1600 Pennsylvania Ave","Washington","DC","22052")
 
 }

@@ -9,7 +9,7 @@
 #'
 #' @return dataframe
 #'
-#' @examples geocoding_api("5619 Belarbor St","Houston","TX","77033")
+#' @examples geocoding_api("1600 Pennsylvania Ave","Washington","DC","22052")
 #'
 #' @export geocoding_api
 
