@@ -9,11 +9,11 @@
 #'
 #' @return dataframe
 #'
-#' @examples geocoding_api("1600 Pennsylvania Ave","Washington","DC","22052")
+#' @examples geocode("1600 Pennsylvania Ave","Washington","DC","22052")
 #'
 #' @export geocoding_api
 
-geocoding_api <- function(street, city = "", state = "", zip = "") {
+geocode <- function(street, city = "", state = "", zip = "") {
   #Replace Spaces with Plus Signs
   street <- gsub(" ","+", street)
   city <- gsub(" ","+",city)
