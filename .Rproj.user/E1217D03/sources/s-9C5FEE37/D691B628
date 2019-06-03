@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1559587798259.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "894381279",
+    "id" : "D691B628",
+    "lastKnownWriteTime" : 1559591949,
+    "last_content_update" : 1559591949918,
+    "path" : "~/Desktop/USCensusGeocodeR/R/USCensusGeocodeR.R",
+    "project_path" : "R/USCensusGeocodeR.R",
+    "properties" : {
+        "cursorPosition" : "11,67",
+        "scrollLine" : "9"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

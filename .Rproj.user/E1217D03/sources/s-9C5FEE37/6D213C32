@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1559591855740.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3183526857",
+    "id" : "6D213C32",
+    "lastKnownWriteTime" : 1559591931,
+    "last_content_update" : 1559591931188,
+    "path" : "~/Desktop/USCensusGeocodeR/man/geocoding_api.Rd",
+    "project_path" : "man/geocoding_api.Rd",
+    "properties" : {
+        "cursorPosition" : "24,54",
+        "scrollLine" : "16"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_doc"
+}
