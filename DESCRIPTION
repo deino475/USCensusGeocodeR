@@ -1,7 +1,7 @@
 Package: USCensusGeocodeR
 Type: Package
 Title: Uses the Census Geocoding API to provide information about addresses
-Version: 0.1.0
+Version: 0.2.0
 Author: Nile Dixon
 Maintainer: Nile Dixon <niledixon475@gmail.com>
 Description: This package allows for individuals to easily geocode address parts using the US Census Geocoding API Services. By passing in the Street Address, City, State, and/or Zip Code, you 

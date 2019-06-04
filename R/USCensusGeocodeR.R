@@ -11,7 +11,9 @@
 #'
 #' @examples geocode("1600 Pennsylvania Ave","Washington","DC","22052")
 #'
-#' @export geocoding_api
+#' @export geocode
+#'
+#'
 
 geocode <- function(street, city = "", state = "", zip = "") {
   #Replace Spaces with Plus Signs
@@ -66,17 +68,31 @@ geocode <- function(street, city = "", state = "", zip = "") {
     #Retrieve the content from the GET request
     resp <- content(req)
     #Save the first match in the data frame.
-    return_data[i,]$BLKGRP = resp$result$addressMatches[[1]]$geographies$`Census Blocks`[[1]]$BLKGRP
-    return_data[i,]$STATE = resp$result$addressMatches[[1]]$geographies$`Census Blocks`[[1]]$STATE
-    return_data[i,]$CENTLON = resp$result$addressMatches[[1]]$geographies$`Census Blocks`[[1]]$CENTLON
-    return_data[i,]$BLOCK = resp$result$addressMatches[[1]]$geographies$`Census Blocks`[[1]]$BLOCK
-    return_data[i,]$BASENAME = resp$result$addressMatches[[1]]$geographies$`Census Blocks`[[1]]$BASENAME
-    return_data[i,]$INTPLAT = resp$result$addressMatches[[1]]$geographies$`Census Blocks`[[1]]$INTPLAT
-    return_data[i,]$POP100 = resp$result$addressMatches[[1]]$geographies$`Census Blocks`[[1]]$POP100
-    return_data[i,]$COUNTY = resp$result$addressMatches[[1]]$geographies$`Census Blocks`[[1]]$COUNTY
-    return_data[i,]$GEOID = resp$result$addressMatches[[1]]$geographies$`Census Blocks`[[1]]$GEOID
-    return_data[i,]$CENTLAT = resp$result$addressMatches[[1]]$geographies$`Census Blocks`[[1]]$CENTLAT
-    return_data[i,]$TRACT = resp$result$addressMatches[[1]]$geographies$`Census Blocks`[[1]]$TRACT
+    tryCatch({
+      return_data[i,]$BLKGRP = resp$result$addressMatches[[1]]$geographies$`Census Blocks`[[1]]$BLKGRP
+      return_data[i,]$STATE = resp$result$addressMatches[[1]]$geographies$`Census Blocks`[[1]]$STATE
+      return_data[i,]$CENTLON = resp$result$addressMatches[[1]]$geographies$`Census Blocks`[[1]]$CENTLON
+      return_data[i,]$BLOCK = resp$result$addressMatches[[1]]$geographies$`Census Blocks`[[1]]$BLOCK
+      return_data[i,]$BASENAME = resp$result$addressMatches[[1]]$geographies$`Census Blocks`[[1]]$BASENAME
+      return_data[i,]$INTPLAT = resp$result$addressMatches[[1]]$geographies$`Census Blocks`[[1]]$INTPLAT
+      return_data[i,]$POP100 = resp$result$addressMatches[[1]]$geographies$`Census Blocks`[[1]]$POP100
+      return_data[i,]$COUNTY = resp$result$addressMatches[[1]]$geographies$`Census Blocks`[[1]]$COUNTY
+      return_data[i,]$GEOID = resp$result$addressMatches[[1]]$geographies$`Census Blocks`[[1]]$GEOID
+      return_data[i,]$CENTLAT = resp$result$addressMatches[[1]]$geographies$`Census Blocks`[[1]]$CENTLAT
+      return_data[i,]$TRACT = resp$result$addressMatches[[1]]$geographies$`Census Blocks`[[1]]$TRACT
+    }, error = {
+      return_data[i,]$BLKGRP = ""
+      return_data[i,]$STATE = ""
+      return_data[i,]$CENTLON = ""
+      return_data[i,]$BLOCK = ""
+      return_data[i,]$BASENAME = ""
+      return_data[i,]$INTPLAT = ""
+      return_data[i,]$POP100 = ""
+      return_data[i,]$COUNTY = ""
+      return_data[i,]$GEOID = ""
+      return_data[i,]$CENTLAT = ""
+      return_data[i,]$TRACT = ""
+    })
   }
   return(return_data)
 }
